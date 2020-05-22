@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Booklist</title>
+  </head>
+  <body>
+<%# フォームデータ送受信確認用コード（本番では削除） %>
+<div style="background-color: skyblue;">
+<p>動作確認用: <%= params %></p>
+</div>
+    <a href="/"><h1>Booklist</h1></a>
+    <h2>書籍の登録フォーム</h2>
+    <form action="/" method="post">
+      <input type="text" name="book_title" placeholder="書籍タイトルを入力" required>
+      <input type="submit" name="submit_add_book" value="登録">
+    </form>
+    <h2>登録された書籍一覧</h2>
+     <ul>
+      <% @records.each do |record| %>
+        <li><%= ERB::Util.html_escape(record['book_title']) %></li>
+      <% end %>
+    </ul>
+  </body>
+</html>
