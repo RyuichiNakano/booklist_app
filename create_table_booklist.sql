@@ -1,0 +1,5 @@
+CREATE TABLE booklist.books(
+    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    book_title varchar(100),
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
