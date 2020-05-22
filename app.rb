@@ -17,5 +17,5 @@ post '/' do
 
   @records = client.query("SELECT * FROM books ORDER BY created_at DESC")
 
-  erb :booklist
+  erb :booklist #ここでerbを実行した。
 end
